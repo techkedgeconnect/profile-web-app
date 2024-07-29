@@ -1,0 +1,22 @@
+# Deployment manifest file for the profile go  web application.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: profile-go-web-app
+  labels:
+    app: profile-go-web-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: profile-go-web-app
+  template:
+    metadata:
+      labels:
+        app: profile-go-web-app
+    spec:
+      containers:
+      - name: profile-go-web-app
+        image: techkedgec0nnect/profile-go-web-app:v1
+        ports:
+        - containerPort: 8080

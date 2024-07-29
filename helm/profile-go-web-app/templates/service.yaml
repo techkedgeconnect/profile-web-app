@@ -1,0 +1,15 @@
+# Service for the deployment of the profile go web application
+apiVersion: v1
+kind: Service
+metadata:
+  name: profile-go-web-app-svc
+  labels:
+    app: profile-go-web-app
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+  selector:
+    app: profile-go-web-app
+  type: ClusterIP
