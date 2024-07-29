@@ -8,7 +8,7 @@ image:
   repository: techkedgec0nnect/profile-go-web-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "10148045176"
+  tag: "10148397831"
 
 ingress:
   enabled: false
